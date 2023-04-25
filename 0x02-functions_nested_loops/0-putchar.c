@@ -1,7 +1,7 @@
-#include"main.h"
+#include "main.h"
 /**
- *main - Entry poin
- *Description; program that prints _putchar
+ *main - Entry point
+ *Description; 'program that prints _putchar'
  *Return; Awlways 0
  */
 
@@ -18,4 +18,3 @@ int main(void)
 	_putchar('\n');
 	return (0);
 }
-
