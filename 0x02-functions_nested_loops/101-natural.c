@@ -6,16 +6,16 @@
 
 int main(void)
 {
-	int i, z = 0;
+	int x, y = 0;
 
-	while (i < 1024)
+	while (x < 1024)
 	{
-		if ((i % 3 == 0) || (i % 5 == 0))
+		if ((x % 3 == 0) || (x % 5 == 0))
 		{
-			z += i;
+			y += x;
 		}
-		i++;
+		x++;
 	}
-	printf("%d\n", z);
+	printf("%d\n", y);
 	return (0);
 }
