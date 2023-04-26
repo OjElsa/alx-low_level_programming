@@ -51,10 +51,11 @@ int main(void)
 		f2o = tmpo;
 
 		if (i != 98)
-			printf(",");
+			printf(", ");
 		else
 			printf("\n");
 		i++;
 	}
 	return (0);
 }
+
