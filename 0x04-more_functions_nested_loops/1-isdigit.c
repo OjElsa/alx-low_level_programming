@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 /**
- *main - Entry point
- *@c: carrier integer values
+ *_isdigit - checks if a character is a digit
+ *@c: carrier variable
  *Return: 1 if true, 0 if false
  */
 
@@ -18,4 +18,3 @@ int _isdigit(int c)
 		return (0);
 	}
 }
-
