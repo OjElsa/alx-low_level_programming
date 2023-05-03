@@ -5,7 +5,7 @@
  *_puts - prints a string and a new line
  *@str: pointer to a string to print
  *Return: 0
- */
+ i*/
 
 void _puts(char *str)
 {
@@ -16,5 +16,5 @@ void _puts(char *str)
 	_putchar(str[i]);
 	i++;
 }
-_putchar('\n');
+	_putchar('\n');
 }
