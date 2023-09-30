@@ -2,9 +2,10 @@
 
 
 /**
- * binary_to_int - converts a binary number to an unsigined int
+ * binary_to_uint - converts a binary number to an unsigined int
  * @b: number to be converted
- * Return:0 incase of failure or an unsigned int
+ * Return: If b is NULL or contains chars not 0 or 1 - 0
+ * or the converted number
  */
 
 unsigned int binary_to_uint(const char *b)
