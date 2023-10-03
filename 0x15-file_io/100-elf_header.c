@@ -1,4 +1,3 @@
-#include "main.h"
 #include <elf.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -52,11 +51,11 @@ void print_magic(unsigned char *e_ident)
 
 	printf("  Magic:   ");
 
-	for (index = 0; inde x< EI_NIDENT; index++)
+	for (index = 0; index < EI_NIDENT; index++)
 	{
 		printf("%02x", e_ident[index]);
 
-		if (index == EI_IDENT -1)
+		if (index == EI_NIDENT -1)
 			printf("\n");
 		else 
 			printf(" ");
@@ -84,7 +83,7 @@ void print_class(unsigned char *e_ident)
 			printf("ELF64\n");
 			break;
 		default:
-			printf("<unknown: %x>\n", e_dient[EI_CLASS]);
+			printf("<unknown: %x>\n", e_ident[EI_CLASS]);
 	}
 }
 
@@ -120,7 +119,7 @@ void print_data(unsigned char *e_ident)
  *
  */
 
-void print_version(unsigned char *e_idient)
+void print_version(unsigned char *e_ident)
 {
 	printf("  Version:                           %d",
 		e_ident[EI_VERSION]);
@@ -175,7 +174,7 @@ void print_osabi(unsigned char *e_ident)
 		case ELFOSABI_ARM:
 			printf("ARM\n");
 			break;
-		case ELFOSABISTANDALONE:
+		case ELFOSABI_STANDALONE:
 			printf("Standalone App\n");
 			break;
 		default:
@@ -267,7 +266,7 @@ void close_elf(int elf)
 	{
 		dprintf(STDERR_FILENO
 			"Error: can't close fd %d\n, elf");
-		exsit(98);
+		exit(98);
 	}
 }
 
