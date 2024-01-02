@@ -27,7 +27,7 @@ void hash_table_print(const hash_table_t *ht)
 
 			if (current->next != NULL || b < ht->size - 1)
 			{
-				printf(",");
+				printf(", ");
 			}
 			current = current->next;
 		}
