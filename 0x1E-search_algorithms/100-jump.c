@@ -20,7 +20,7 @@ int jump_search(int *array, size_t size, int value)
 
 	jump_step = sqrt(size);
 	left = 0;
-	right = jump_step;
+	right = fmin(jump_step, size) - 1;
 
 	while (right < size && array[right] < value)
 	{
